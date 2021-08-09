@@ -6,12 +6,12 @@
     background-color: #fdfae7;
 }
 
-li, a, button{
-    font-family: monospace;
+li, a, button{  
     font-weight: 300;
     font-size: 20px;
     color:#d45526;
     text-decoration: none;
+    font-family: monospace;
 }
 
 header{
