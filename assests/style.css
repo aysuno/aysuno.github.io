@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 
 *{
@@ -87,7 +88,7 @@ h1{
 
 
 button{
-    padding: 9px 25px;
+    padding: 10px 25px;
     background-color: #d45526;
     border: none;
     color:antiquewhite;
@@ -114,12 +115,41 @@ button:hover{
 
 
  
-p{
+.p1{
     font-size: 16px;
-    font-family:monospace;
+    font-family:'Nunito',sans-serif;
     text-align: center;
     margin:0;
-    padding:40px;
-    font-weight: 100;
+    padding:40px 40px 20px 40px;
+    font-weight: 600;
 }
+
+.container{
+    width:500px;
+    height:300px;
+}
+
+.aboutImg{
+    height:310px;
+    padding: 0px 40px 40px 200px; 
+    float: left;
+}
+
+.titles{
+    font-family: 'Nunito', sans-serif;
+    font-size:20px;
+    font-weight: 300;
+    text-align: justify;
+    padding-right: 200px;
+    padding-left:200px;
+
+}
+
+h2{
+    font-size: 30px;
+    font-family: monospace;
+    font-weight: 600;
+    padding: 100px 40px 40px 200px;
+}
+
 
