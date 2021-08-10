@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
 
 *{
     box-sizing:border-box;
@@ -6,13 +9,21 @@
     background-color: #fdfae7;
 }
 
-li, a, button{  
+li, a{  
     font-weight: 300;
     font-size: 20px;
     color:#d45526;
     text-decoration: none;
     font-family: monospace;
 }
+
+button{
+    font-weight: 200;
+    font-size:16px;
+    font-family: monospace;
+    text-align: center;
+}
+
 
 header{
     display: flex;
@@ -31,29 +42,84 @@ header{
 
 }
 
+/*
 .navlist li a{
-    transition: all 0.3s ease 0s;
+    transition: all 0.2s ease 0s;
 
 }
+*/
 
 .navlist li a:hover{
     color:rgb(110, 6, 6);
     
 }
 
-/*
+.image{
+    width:550px; 
+    height:550px;
+
+}
+
+h1{
+    display: inline;
+    float: left;
+    font-size: 50px;
+    font-family: monospace;
+    padding: 150px 20px 20px 20px;
+    color:#000000;
+}
+
+.div1{
+    width:550px;
+    height:550px;
+    display: flex;
+    display: inline-block;
+}
+
+
+
+.div3{
+    width:550px; 
+    height:550px;
+}
+
+
+
+
 button{
-    margin-left:20px;
     padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
+    background-color: #d45526;
     border: none;
+    color:antiquewhite;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: all 1s ease 0s;
 }
 
 button:hover{
-    background-color: rgba(0,136,169,0.8);   
+    background-color: rgb(110, 6, 6);
 }
 
-*/
+
+
+
+#main{
+    text-align: center;
+}
+
+@media only screen and (min-width: 481px) and (max-width: 980px){
+    #WRAPPER { display: block !important;  }
+    .smaller { display: inline-block !important; }
+  }
+
+
+ 
+p{
+    font-size: 16px;
+    font-family:monospace;
+    text-align: center;
+    margin:0;
+    padding:40px;
+    font-weight: 100;
+}
+
