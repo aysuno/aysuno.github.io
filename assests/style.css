@@ -61,6 +61,13 @@ header{
 
 }
 
+.imageMailBox{
+    height:420px;
+    margin-bottom:90px;
+    margin-left:60px;
+
+}
+
 h1{
     display: inline;
     float: left;
@@ -119,6 +126,15 @@ button:hover{
     font-size: 16px;
     font-family:'Nunito',sans-serif;
     text-align: center;
+    margin:0;
+    padding:40px 40px 20px 40px;
+    font-weight: 600;
+}
+
+.p2{
+    font-size: 16px;
+    font-family:'Nunito',sans-serif;
+    text-align: left;
     margin:0;
     padding:40px 40px 20px 40px;
     font-weight: 600;
@@ -194,11 +210,14 @@ h2{
 }
 
 i{
-    padding: 30px 30px 30px 0px;
+    padding: 20px 10px 10px 10px;
     font-size: 35px; 
     font-family: 'Nunito', sans-serif;
 
 }
 
+i:hover{
+    color: rgb(110, 6, 6);
+}
 
-  
+
