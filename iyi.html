@@ -17,21 +17,15 @@ body{
 .page{
     display:flex;
     justify-content:center;
-    align-items:flex-start; /* üstten hizalama */
+    align-items:center;
+    height:100vh;
     gap:80px;
-    padding:40px;
-    flex-direction: row; /* default masaüstü */
 }
-
-/* LEFT IMAGE */
 
 .left img{
     width:350px;
     image-rendering: pixelated;
-    max-width:100%;
 }
-
-/* PIXEL FRAME */
 
 .frame{
     width:420px;
@@ -44,10 +38,7 @@ body{
     text-align:center;
     padding:30px;
     box-sizing:border-box;
-    max-width:100%;
 }
-
-/* HEART */
 
 .heart{
     font-size:32px;
@@ -55,21 +46,15 @@ body{
     margin-bottom:20px;
 }
 
-/* TITLE */
-
 h1{
     font-size:14px;
     line-height:1.6;
 }
 
-/* TEXT */
-
 p{
     font-size:9px;
     margin-top:20px;
 }
-
-/* BUTTON */
 
 button{
     margin-top:25px;
@@ -85,30 +70,9 @@ button:hover{
     background:#eee;
 }
 
-/* RESULT */
-
 #result{
     margin-top:25px;
     font-size:16px;
-}
-
-/* RESPONSIVE MOBIL */
-
-@media screen and (max-width: 768px){
-    .page{
-        flex-direction: column; /* üst alta diz */
-        align-items:center;
-        gap:30px;
-        padding:20px;
-    }
-    .left img{
-        width:90%; /* resmi büyüt */
-    }
-    .frame{
-        width:90%;
-        height:auto; /* mobilde yükseklik otomatik */
-        padding:20px;
-    }
 }
 
 </style>
@@ -119,7 +83,7 @@ button:hover{
 <div class="page">
 
 <div class="left">
-<img src="resim.png" alt="Resim">
+<img src="resim.png">
 </div>
 
 <div class="frame">
