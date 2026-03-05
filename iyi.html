@@ -20,12 +20,18 @@ body{
     align-items:center;
     height:100vh;
     gap:80px;
+    flex-wrap: wrap; /* mobilde alt alta geçiş için */
 }
+
+/* LEFT IMAGE */
 
 .left img{
     width:350px;
     image-rendering: pixelated;
+    max-width:90vw;
 }
+
+/* PIXEL FRAME */
 
 .frame{
     width:420px;
@@ -38,7 +44,10 @@ body{
     text-align:center;
     padding:30px;
     box-sizing:border-box;
+    max-width:90vw; /* mobilde kutu küçülür */
 }
+
+/* HEART */
 
 .heart{
     font-size:32px;
@@ -46,15 +55,21 @@ body{
     margin-bottom:20px;
 }
 
+/* TITLE */
+
 h1{
     font-size:14px;
     line-height:1.6;
 }
 
+/* TEXT */
+
 p{
     font-size:9px;
     margin-top:20px;
 }
+
+/* BUTTON */
 
 button{
     margin-top:25px;
@@ -70,9 +85,30 @@ button:hover{
     background:#eee;
 }
 
+/* RESULT */
+
 #result{
     margin-top:25px;
     font-size:16px;
+}
+
+/* RESPONSIVE (MOBIL) */
+
+@media screen and (max-width: 768px){
+    .page{
+        flex-direction: column;
+        gap:30px;
+        height:auto;
+        padding:20px 0;
+    }
+    .left img{
+        width:80%;
+    }
+    .frame{
+        width:90%;
+        height:auto;
+        padding:20px;
+    }
 }
 
 </style>
@@ -92,7 +128,7 @@ button:hover{
 
 <h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM</h1>
 
-<p>Bugun seni yuzde kac sevdigimi ogrenmek icin butona tikla</p>
+<p>Bugun seni yuzde kac sevecegimi ogrenmek icin butona tikla</p>
 
 <button id="loveBtn" onclick="calculateLove()">HESAPLA</button>
 
