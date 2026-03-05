@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Love Meter ❤️</title>
+<title>Bugün Seni Ne Kadar Seviyorum ❤️</title>
 
 <style>
 
@@ -64,11 +64,11 @@ button:hover{
 
 <div class="heart">❤️</div>
 
-<h1>Love Meter</h1>
+<h1>Bugün seni ne kadar seviyorum</h1>
 
-<p>Aşk yüzdesini görmek için butona bas!</p>
+<p>Bugün seni yüzde kaç sevdiğimi öğrenmek için butona tıkla</p>
 
-<button onclick="calculateLove()">Love Meter'i Hesapla</button>
+<button onclick="calculateLove()">Hesapla</button>
 
 <div id="result"></div>
 
@@ -83,16 +83,16 @@ function calculateLove(){
     let message="";
 
     if(percentage < 30){
-        message="Hmm... pek uyumlu görünmüyor 😅";
+        message="Bugün biraz naz yapıyorum 😅";
     }
     else if(percentage < 60){
-        message="Fena değil! Belki bir şans vardır 💕";
+        message="Seni seviyorum ama biraz daha hak etmelisin 💕";
     }
     else if(percentage < 85){
-        message="Güzel bir aşk olabilir ❤️";
+        message="Bugün seni baya seviyorum ❤️";
     }
     else{
-        message="Gerçek aşk! 💖";
+        message="Bugün sana aşırı aşığım 💖";
     }
 
     document.getElementById("result").innerHTML =
