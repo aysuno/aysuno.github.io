@@ -17,10 +17,10 @@ body{
 .page{
     display:flex;
     justify-content:center;
-    align-items:center;
-    height:100vh;
+    align-items:flex-start; /* üstten hizalama */
     gap:80px;
-    flex-wrap: wrap; /* mobilde alt alta geçiş için */
+    padding:40px;
+    flex-direction: row; /* default masaüstü */
 }
 
 /* LEFT IMAGE */
@@ -28,7 +28,7 @@ body{
 .left img{
     width:350px;
     image-rendering: pixelated;
-    max-width:90vw;
+    max-width:100%;
 }
 
 /* PIXEL FRAME */
@@ -44,7 +44,7 @@ body{
     text-align:center;
     padding:30px;
     box-sizing:border-box;
-    max-width:90vw; /* mobilde kutu küçülür */
+    max-width:100%;
 }
 
 /* HEART */
@@ -92,21 +92,21 @@ button:hover{
     font-size:16px;
 }
 
-/* RESPONSIVE (MOBIL) */
+/* RESPONSIVE MOBIL */
 
 @media screen and (max-width: 768px){
     .page{
-        flex-direction: column;
+        flex-direction: column; /* üst alta diz */
+        align-items:center;
         gap:30px;
-        height:auto;
-        padding:20px 0;
+        padding:20px;
     }
     .left img{
-        width:80%;
+        width:90%; /* resmi büyüt */
     }
     .frame{
         width:90%;
-        height:auto;
+        height:auto; /* mobilde yükseklik otomatik */
         padding:20px;
     }
 }
@@ -119,16 +119,16 @@ button:hover{
 <div class="page">
 
 <div class="left">
-<img src="resim.png">
+<img src="resim.png" alt="Resim">
 </div>
 
 <div class="frame">
 
 <div class="heart">♥</div>
 
-<h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM</h1>
+<h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM?</h1>
 
-<p>Bugun seni yuzde kac sevecegimi ogrenmek icin butona tikla</p>
+<p>Bugun seni yuzde kac sevdigimi ogrenmek icin butona tikla</p>
 
 <button id="loveBtn" onclick="calculateLove()">HESAPLA</button>
 
