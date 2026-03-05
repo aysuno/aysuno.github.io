@@ -17,7 +17,7 @@ body{
     justify-content:center;
     align-items:center;
     gap:80px;
-    height:100vh;
+    min-height:100vh;
 }
 
 /* Resim */
@@ -80,10 +80,10 @@ button:hover{
 /* Mobil düzen */
 @media screen and (max-width: 768px){
     .page{
-        flex-direction: column; /* resim üstte, kutu altta */
+        flex-direction: column !important; /* resim üstte, kutu altta */
         align-items:center;
-        height:auto;
         gap:30px;
+        min-height:auto;
         padding:20px 0;
     }
     .left img{
@@ -139,7 +139,7 @@ function showLove(){
         message = "Bugun en cok seviyorum ❤️";
     } else { 
         percentage = 60;
-        message = "Bugun orta seviyorum 😌";
+        message = "Bugun orta seviyorum? 😌";
     }
 
     document.getElementById("result").innerHTML = percentage + "%<br><br>" + message;
