@@ -109,7 +109,7 @@ button:hover{
 
     <div class="frame">
         <div class="heart">♥</div>
-        <h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM</h1>
+        <h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM?</h1>
         <p>Bugun seni yüzde kaç sevdigimi öğrenmek için butona tıkla</p>
         <button id="loveBtn" onclick="showLove()">HESAPLA</button>
         <div id="result"></div>
@@ -132,16 +132,16 @@ function showLove(){
 
     if(dayNumber >=1 && dayNumber <=5){ 
         percentage = 0;
-        message = "Bugun seni sevmiyorum";
+        message = "Bugün seni sevmiyorum";
     } else if(dayNumber >=6 && dayNumber <=13){ 
         percentage = 30;
-        message = "Bugun az seviyorum, birazcık ";
+        message = "Bugün az seviyorum, birazcık ";
     } else if(dayNumber >=14 && dayNumber <=16){ 
         percentage = 1000;
-        message = "Bugün sana aşığımm ❤️";
+        message = "Bugün sana aşığımmmm ❤️";
     } else { 
         percentage = 50;
-        message = "Bugün orta seviyorum. iyiğ - tek i ile";
+        message = "Bugün orta seviyorum. iyi - tek i ile";
     }
 
     document.getElementById("result").innerHTML = percentage + "%<br><br>" + message;
