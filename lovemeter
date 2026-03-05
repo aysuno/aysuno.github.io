@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Love Meter ❤️</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff758c,#ff7eb3);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    width:350px;
+}
+
+h1{
+    color:#ff4d6d;
+}
+
+button{
+    background:#ff4d6d;
+    border:none;
+    padding:12px 25px;
+    color:white;
+    font-size:16px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+button:hover{
+    background:#ff2e55;
+}
+
+#result{
+    font-size:28px;
+    margin-top:20px;
+    color:#ff4d6d;
+    font-weight:bold;
+}
+
+.heart{
+    font-size:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="heart">❤️</div>
+
+<h1>Love Meter</h1>
+
+<p>Aşk yüzdesini görmek için butona bas!</p>
+
+<button onclick="calculateLove()">Love Meter'i Hesapla</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function calculateLove(){
+
+    let percentage = Math.floor(Math.random()*101);
+
+    let message="";
+
+    if(percentage < 30){
+        message="Hmm... pek uyumlu görünmüyor 😅";
+    }
+    else if(percentage < 60){
+        message="Fena değil! Belki bir şans vardır 💕";
+    }
+    else if(percentage < 85){
+        message="Güzel bir aşk olabilir ❤️";
+    }
+    else{
+        message="Gerçek aşk! 💖";
+    }
+
+    document.getElementById("result").innerHTML =
+    percentage + "%<br>" + message;
+
+}
+
+</script>
+
+</body>
+</html>
