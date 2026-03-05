@@ -5,41 +5,115 @@
 <title>Bugun Seni Ne Kadar Seviyorum</title>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 <style>
-body{background:white;margin:0;font-family:'Press Start 2P', cursive;}
-.page{display:flex;justify-content:center;align-items:flex-start;gap:80px;flex-wrap:wrap;padding:40px;}
-.left img{width:350px;image-rendering: pixelated;max-width:100%;}
-.frame{width:420px;height:auto;border:6px solid black;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px;box-sizing:border-box;max-width:100%;}
-.heart{font-size:32px;color:red;margin-bottom:20px;}
-h1{font-size:14px;line-height:1.6;}
-p{font-size:9px;margin-top:20px;}
-button{margin-top:25px;padding:12px 16px;border:4px solid black;background:white;cursor:pointer;font-family:'Press Start 2P', cursive;font-size:10px;}
-button:hover{background:#eee;}
-#result{margin-top:25px;font-size:16px;}
+body{
+    background:white;
+    margin:0;
+    font-family:'Press Start 2P', cursive;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+/* RESİM */
+.left img{
+    width:350px;
+    image-rendering: pixelated;
+    max-width:100%;
+}
+
+/* KUTU */
+.frame{
+    width:420px;
+    height:auto;
+    border:6px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+    box-sizing:border-box;
+    max-width:100%;
+}
+
+.heart{
+    font-size:32px;
+    color:red;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:14px;
+    line-height:1.6;
+}
+
+p{
+    font-size:9px;
+    margin-top:20px;
+}
+
+button{
+    margin-top:25px;
+    padding:12px 16px;
+    border:4px solid black;
+    background:white;
+    cursor:pointer;
+    font-family:'Press Start 2P', cursive;
+    font-size:10px;
+}
+
+button:hover{
+    background:#eee;
+}
+
+#result{
+    margin-top:25px;
+    font-size:16px;
+}
+
+/* MOBİL UYUM */
 @media screen and (max-width: 768px){
-.page{flex-direction: column;align-items:center;gap:30px;padding:20px;}
-.left img{width:90%;}
-.frame{width:90%;padding:20px;}
+    body{
+        height:auto;
+        padding:20px 0;
+    }
+    .page{
+        flex-direction: column;
+        gap:30px;
+    }
+    .left img{
+        width:90%;
+    }
+    .frame{
+        width:90%;
+        padding:20px;
+    }
 }
 </style>
 </head>
 <body>
 
 <div class="page">
-<div class="left">
-<img src="resim.png" alt="Resim">
-</div>
+    <div class="left">
+        <img src="resim.png" alt="Resim">
+    </div>
 
-<div class="frame">
-<div class="heart">♥</div>
-
-<h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM?</h1>
-
-<p>Bugun seni yuzde kac sevecegımı ogrenmek icin butona tikla</p>
-
-<button id="loveBtn" onclick="showLove()">HESAPLA</button>
-
-<div id="result"></div>
-</div>
+    <div class="frame">
+        <div class="heart">♥</div>
+        <h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM</h1>
+        <p>Bugun seni yüzde kaç sevdigimi öğrenmek için butona tıkla</p>
+        <button id="loveBtn" onclick="showLove()">HESAPLA</button>
+        <div id="result"></div>
+    </div>
 </div>
 
 <script>
@@ -51,7 +125,7 @@ function showLove(){
     const startDate = new Date(cycleStartYear, cycleStartMonth, cycleStartDay);
 
     let diffDays = Math.floor((today - startDate)/(1000*60*60*24));
-    let dayNumber = ((diffDays % 28) + 28) % 28 + 1; // 1-28 arası döngü
+    let dayNumber = ((diffDays % 28) + 28) % 28 + 1; // 1-28 arası
 
     let percentage = 0;
     let message = "";
@@ -59,15 +133,15 @@ function showLove(){
     if(dayNumber >=1 && dayNumber <=5){ 
         percentage = 0;
         message = "Bugun seni sevmiyorum";
-    } else if(dayNumber >=6 && dayNumber <=11){ 
-        percentage = 40;
-        message = "Bugun az seviyorum 🙂";
-    } else if(dayNumber >=12 && dayNumber <=16){ 
-        percentage = 90;
-        message = "Bugun sana asıgımm ❤️";
+    } else if(dayNumber >=6 && dayNumber <=13){ 
+        percentage = 30;
+        message = "Bugun az seviyorum, birazcık ";
+    } else if(dayNumber >=14 && dayNumber <=16){ 
+        percentage = 1000;
+        message = "Bugün sana aşığımm ❤️";
     } else { 
-        percentage = 60;
-        message = "Bugun orta seviyorum 😌";
+        percentage = 50;
+        message = "Bugün orta seviyorum. iyi - tek i ile";
     }
 
     document.getElementById("result").innerHTML = percentage + "%<br><br>" + message;
