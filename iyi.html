@@ -22,14 +22,10 @@ body{
     gap:80px;
 }
 
-/* LEFT IMAGE */
-
 .left img{
     width:350px;
     image-rendering: pixelated;
 }
-
-/* PIXEL FRAME */
 
 .frame{
     width:420px;
@@ -44,29 +40,21 @@ body{
     box-sizing:border-box;
 }
 
-/* HEART */
-
 .heart{
     font-size:32px;
     color:red;
     margin-bottom:20px;
 }
 
-/* TITLE */
-
 h1{
     font-size:14px;
     line-height:1.6;
 }
 
-/* TEXT */
-
 p{
     font-size:9px;
     margin-top:20px;
 }
-
-/* BUTTON */
 
 button{
     margin-top:25px;
@@ -82,11 +70,9 @@ button:hover{
     background:#eee;
 }
 
-/* RESULT */
-
 #result{
     margin-top:25px;
-    font-size:18px;
+    font-size:16px;
 }
 
 </style>
@@ -106,9 +92,9 @@ button:hover{
 
 <h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM</h1>
 
-<p>bugun seni yuzde kac sevdigimi ogrenmek icin butona tikla</p>
+<p>Bugun seni yuzde kac sevdigimi ogrenmek icin butona tikla</p>
 
-<button onclick="calculateLove()">HESAPLA</button>
+<button id="loveBtn" onclick="calculateLove()">HESAPLA</button>
 
 <div id="result"></div>
 
@@ -122,7 +108,25 @@ function calculateLove(){
 
 let percentage = Math.floor(Math.random()*101);
 
-document.getElementById("result").innerHTML = percentage + "%";
+let message = "";
+
+if(percentage < 30){
+message = "bugun biraz az seviyorum 😅";
+}
+else if(percentage < 60){
+message = "bugun orta seviyede seviyorum 🙂";
+}
+else if(percentage < 85){
+message = "bugun seni baya seviyorum ❤️";
+}
+else{
+message = "bugun sana cok asigim ❤️❤️";
+}
+
+document.getElementById("result").innerHTML =
+percentage + "%<br><br>" + message;
+
+document.getElementById("loveBtn").style.display = "none";
 
 }
 
