@@ -9,10 +9,6 @@ body{
     background:white;
     margin:0;
     font-family:'Press Start 2P', cursive;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
 }
 
 /* Sayfanın ana yapısı */
@@ -21,6 +17,7 @@ body{
     justify-content:center;
     align-items:center;
     gap:80px;
+    height:100vh;
 }
 
 /* Resim */
@@ -82,14 +79,12 @@ button:hover{
 
 /* Mobil düzen */
 @media screen and (max-width: 768px){
-    body{
-        height:auto;
-        padding:20px 0;
-    }
     .page{
         flex-direction: column; /* resim üstte, kutu altta */
         align-items:center;
+        height:auto;
         gap:30px;
+        padding:20px 0;
     }
     .left img{
         width:90%; /* mobilde büyük resim */
