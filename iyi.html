@@ -15,22 +15,22 @@ body{
     height:100vh;
 }
 
+/* Sayfanın ana yapısı */
 .page{
     display:flex;
     justify-content:center;
     align-items:center;
     gap:80px;
-    flex-wrap:wrap;
 }
 
-/* RESİM */
+/* Resim */
 .left img{
     width:350px;
     image-rendering: pixelated;
     max-width:100%;
 }
 
-/* KUTU */
+/* Kutu */
 .frame{
     width:420px;
     height:auto;
@@ -80,22 +80,25 @@ button:hover{
     font-size:16px;
 }
 
-/* MOBİL UYUM */
+/* Mobil düzen */
 @media screen and (max-width: 768px){
     body{
         height:auto;
         padding:20px 0;
     }
     .page{
-        flex-direction: column;
+        flex-direction: column; /* resim üstte, kutu altta */
+        align-items:center;
         gap:30px;
     }
     .left img{
-        width:90%;
+        width:90%; /* mobilde büyük resim */
+        max-width:350px;
     }
     .frame{
-        width:90%;
+        width:90%; /* kutu ekran genişliğine uyumlu */
         padding:20px;
+        height:auto;
     }
 }
 </style>
@@ -109,7 +112,7 @@ button:hover{
 
     <div class="frame">
         <div class="heart">♥</div>
-        <h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM?</h1>
+        <h1>BUGUN SENI<br>NE KADAR<br>SEVIYORUM</h1>
         <p>Bugun seni yüzde kaç sevdigimi öğrenmek için butona tıkla</p>
         <button id="loveBtn" onclick="showLove()">HESAPLA</button>
         <div id="result"></div>
@@ -132,16 +135,16 @@ function showLove(){
 
     if(dayNumber >=1 && dayNumber <=5){ 
         percentage = 0;
-        message = "Bugün seni sevmiyorum";
+        message = "Bugun seni sevmiyorum 😶";
     } else if(dayNumber >=6 && dayNumber <=13){ 
-        percentage = 30;
-        message = "Bugün az seviyorum, birazcık ";
+        percentage = 40;
+        message = "Bugun az seviyorum 🙂";
     } else if(dayNumber >=14 && dayNumber <=16){ 
-        percentage = 1000;
-        message = "Bugün sana aşığımmmm ❤️";
+        percentage = 90;
+        message = "Bugun en cok seviyorum ❤️";
     } else { 
-        percentage = 50;
-        message = "Bugün orta seviyorum. iyi - tek i ile";
+        percentage = 60;
+        message = "Bugun orta seviyorum 😌";
     }
 
     document.getElementById("result").innerHTML = percentage + "%<br><br>" + message;
